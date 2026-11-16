@@ -15,6 +15,8 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item TOTEM_OF_WOLFGANG = registerItem("totem_of_wolfgang",Item::new);
+    public static final Item TOTEM_OF_THUNDER = registerItem("totem_of_thunder",Item::new);
+    public static final Item TOTEM_OF_THE_GHOST = registerItem("totem_of_the_ghost",Item::new);
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(OpTotems.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(OpTotems.MOD_ID, name)))));
@@ -23,6 +25,9 @@ public class ModItems {
         OpTotems.LOGGER.info("Registering Mod Items " + OpTotems.MOD_ID);
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output ->{
                 output.accept(TOTEM_OF_WOLFGANG);
+                output.accept(TOTEM_OF_THUNDER);
+                output.accept(TOTEM_OF_THE_GHOST);
         });
     }
+
 }
