@@ -22,13 +22,13 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item TOTEM_OF_WOLFGANG = registerItem("totem_of_wolfgang",
             properties -> new totem_of_wolfgang(properties.component(
-                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING)));
+                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING).stacksTo(1)));
     public static final Item TOTEM_OF_THUNDER = registerItem("totem_of_thunder",
             properties -> new totem_of_thunder(properties.component(
-                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING)));
+                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING).stacksTo(1)));
     public static final Item TOTEM_OF_THE_GHOST = registerItem("totem_of_the_ghost",
             properties -> new totem_of_the_ghost(properties.component(
-                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING)));
+                    DataComponents.DEATH_PROTECTION, DeathProtection.TOTEM_OF_UNDYING).stacksTo(1)));
     private static Item registerItem(String name, Function<Item.Properties, Item> function){
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(OpTotems.MOD_ID, name),
                 function.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(OpTotems.MOD_ID, name)))));
