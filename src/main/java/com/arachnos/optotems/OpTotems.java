@@ -16,7 +16,7 @@ public class OpTotems implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		TotemHandler.register();
-	}
+		}
 
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);

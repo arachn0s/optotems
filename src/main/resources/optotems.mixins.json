@@ -3,7 +3,8 @@
 	"package": "com.arachnos.optotems.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"TotemActivaterMixin"
+		"TotemActivaterMixin",
+		"EvokerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
