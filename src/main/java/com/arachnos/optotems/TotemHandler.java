@@ -31,6 +31,7 @@ public class TotemHandler {
                 ghostTimers.put(player.getUUID(), -1);
                 return true;
             } else if (istotem.is(ModItems.TOTEM_OF_WOLFGANG)) {
+                istotem.shrink(1);
                 world.broadcastEntityEvent(player, (byte) 35);
                 player.setHealth(1);
                 player.removeAllEffects();
@@ -40,6 +41,7 @@ public class TotemHandler {
                 spawnWolves(player, world);
                 return true;
             } else if (istotem.is(ModItems.TOTEM_OF_THUNDER)) {
+                istotem.shrink(1);
                 world.broadcastEntityEvent(player, (byte) 35);
                 player.setHealth(1);
                 player.removeAllEffects();
